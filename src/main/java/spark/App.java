@@ -20,21 +20,37 @@ public class App {
       ones.put('8',"eight");
       ones.put('9',"nine");
 
-      // HashMap<String, String> tens = new HashMap();
-      // tens.put("1","ten");
-      // tens.put("2","twenty");
-      // tens.put("3","thirty");
-      // tens.put("4","fourty");
-      // tens.put("5","fifty");
-      // tens.put("6","sixty");
-      // tens.put("7","seventy");
-      // tens.put("8","eighty");
-      // tens.put("9","ninety");
 
-      if (userInputArray.length == 1) {
+      HashMap<Character, String> teens = new HashMap();
+      teens.put('0',"ten");
+      teens.put('1',"eleven");
+      teens.put('2',"twelve");
+      teens.put('3',"thirteen");
+      teens.put('4',"fourteen");
+      teens.put('5',"fifteen");
+      teens.put('6',"sixteen");
+      teens.put('7',"seventeen");
+      teens.put('8',"eighteen");
+      teens.put('9',"nineteen");
 
+      HashMap<Character, String> tens = new HashMap();
+      tens.put('1',"ten");
+      tens.put('2',"twenty");
+      tens.put('3',"thirty");
+      tens.put('4',"fourty");
+      tens.put('5',"fifty");
+      tens.put('6',"sixty");
+      tens.put('7',"seventy");
+      tens.put('8',"eighty");
+      tens.put('9',"ninety");
+
+        if (userInputArray.length == 1) {
         test = ones.get(userInputArray[0]);
-      }
+        } else if ((userInputArray.length == 2) && (userInputArray[0] ==  '1')) { test = teens.get(userInputArray[1]);
+
+        } else {
+        test = tens.get(userInputArray[0]) + ones.get(userInputArray[1]);
+        }
         return test;
 
     }
