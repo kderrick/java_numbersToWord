@@ -1,7 +1,5 @@
 # java_numbersToWord
 
-# javaPingPong
-
 #Description
 
 This application was built as practice using Java and with a Gradle server and the goal of development was to create an application that translates numbers in numeric form into written words.
